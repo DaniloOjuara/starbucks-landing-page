@@ -28,13 +28,13 @@
                 <a href="#" class="">Learn More</a>
             </div>    
             <div class="imgbox">
-                <img src="./assets/starmatcha.png" class="starbucks">
+                <img src="./assets/img1.png" class="starbucks">
             </div>
         </div>
         <ul class="thumb">   
-            <li><img src="./assets/starmatcha.png"></li>
-            <li><img src="./assets/starberry.png"></li>
-            <li><img src="./assets/startutti.png"></li>
+            <li><img src="./assets/thumb1.png" onclick="imgSlider('./assets/img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="./assets/thumb2.png" onclick="imgSlider('./assets/img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="./assets/thumb3.png" onclick="imgSlider('./assets/img3.png');changeCircleColor('#d752b1')"></li>
         </ul>
         <ul class="sci">
             <li><a href="#"><img src="./assets/facebook.png"></a></li>
@@ -42,6 +42,16 @@
             <li><a href="#"><img src="./assets/instagram.png"></a></li>
         </ul>
     </section>
-</body>
 
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.starbucks').src = anything;   
+        }
+
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
 </html>
